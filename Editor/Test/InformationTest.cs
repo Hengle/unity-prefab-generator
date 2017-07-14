@@ -6,8 +6,8 @@ using System.Collections.Generic;
 using YamlDotNet.Core;
 using YamlDotNet.Core.Events;
 using YamlDotNet.Serialization;
-//using YamlDotNet.Samples.Helpers;
-//using YamlDotNet.RepresentationModel;
+using YamlDotNet.Samples.Helpers;
+using YamlDotNet.RepresentationModel;
 using System.Text;
 using System.IO;
 using System;
@@ -15,24 +15,24 @@ using System;
 public class InformationTest
 {
 
-    //[Test]
-    //public void PrintPrefabInfo1()
-    //{
-    //    var prefabPath = "Assets/Prefab-Generator/Editor/Test/Cube.prefab";
-    //    var input = new StreamReader(prefabPath, Encoding.UTF8);
-    //    var yaml = new YamlStream();
-    //    yaml.Load(input);
-    //    Debug.Log("yaml.Documents.Count=" + yaml.Documents.Count);
-    //    foreach (var item in yaml.Documents)
-    //    {
-    //        YamlMappingNode root = item.RootNode as YamlMappingNode;
-    //        foreach (var yitem in root.Children)
-    //        {
-    //            Debug.Log("[Root] " + yitem.Key + "\n" + "[Tag:]" + item.RootNode.Tag + "\n" + "[Anchor:]" + item.RootNode.Anchor + "\n");
-    //            Debug.Log("[value] " + yitem.Value);
-    //        }
-    //    }
-    //}
+    [Test]
+    public void PrintPrefabInfo1()
+    {
+        var prefabPath = "Assets/Prefab-Generator/Editor/Test/Cube.prefab";
+        var input = new StreamReader(prefabPath, Encoding.UTF8);
+        var yaml = new YamlStream();
+        yaml.Load(input);
+        Debug.Log("yaml.Documents.Count=" + yaml.Documents.Count);
+        foreach (var item in yaml.Documents)
+        {
+            YamlMappingNode root = item.RootNode as YamlMappingNode;
+            foreach (var yitem in root.Children)
+            {
+                Debug.Log("[Root] " + yitem.Key + "\n" + "[Tag:]" + item.RootNode.Tag + "\n" + "[Anchor:]" + item.RootNode.Anchor + "\n");
+                Debug.Log("[value] " + yitem.Value);
+            }
+        }
+    }
 
     [Test]
     public void PrintPrefabInfo2()
@@ -42,42 +42,33 @@ public class InformationTest
         var deserializer = new DeserializerBuilder().Build();
 
         var parser = new Parser(input);
-
         // Consume the stream start event "manually"
         StreamStart start = parser.Expect<StreamStart>();
         if (start != null)
         {
             var ds = parser.Expect<DocumentStart>();
-            while (ds != null)
-            {
-                foreach (var item in ds.Tags){
-                    Debug.Log(item);
-                }
-                //Debug.Log(string.Format("{0}.{0}", ds.Version.Version.Major, ds.Version.Version.Minor));
-                var prefab = deserializer.Deserialize<YamlUserModel.Prefab>(parser);
-                Debug.Log(prefab.m_IsPrefabParent);
-                break;
-            }
+            Debug.Log(ds);
 
             Debug.Log(parser.Current.GetType());
+            var sd = parser.Expect<MappingStart>();
+            Debug.Log(sd.ToString());
 
-            int count = 0;
-            var ds1 = parser.Allow<MappingStart>();
-            while (ds1 != null)
-            {
-                Debug.Log(ds1.Anchor);
-                Debug.Log(ds1.Tag);
-                var obj = deserializer.Deserialize(parser);
-                Debug.Log(obj);
-                Debug.Log(parser.Current.GetType());
-                ds1 = parser.Allow<MappingStart>();
-                if (count ++ > 100)
-                {
-                    break;
-                }
-            }
+            Debug.Log(parser.Current.GetType());
+            var sr = parser.Expect<YamlDotNet.Core.Events.Scalar>();
+            Debug.Log(sr.Value);
+
+            Debug.Log(parser.Current.GetType());
+            //sd = parser.Expect<MappingStart>();
+            Debug.Log(sd.ToString());
+
+            //Debug.Log(string.Format("{0}.{0}", ds.Version.Version.Major, ds.Version.Version.Minor));
+            var prefab = deserializer.Deserialize<YamlUserModel.Prefab>(parser);
+            Debug.Log(prefab);
+
+            //var gameobj = deserializer.Deserialize<YamlUserModel.GameObject>(parser);
+            //Debug.Log(gameobj);
         }
-      
+
     }
 }
 /*%YAML 1.1
