@@ -47,23 +47,34 @@ public class InformationTest
         StreamStart start = parser.Expect<StreamStart>();
         if (start != null)
         {
-            var ds = parser.Allow<DocumentStart>();
-            if (ds != null)
+            var ds = parser.Expect<DocumentStart>();
+            while (ds != null)
             {
-                foreach (var item in ds.Tags)
-                {
+                foreach (var item in ds.Tags){
                     Debug.Log(item);
                 }
-                Debug.Log(ds.Version);
+                //Debug.Log(string.Format("{0}.{0}", ds.Version.Version.Major, ds.Version.Version.Minor));
+                var prefab = deserializer.Deserialize<YamlUserModel.Prefab>(parser);
+                Debug.Log(prefab.m_IsPrefabParent);
+                break;
             }
-            var ds1 = parser.Allow<MappingStart>();
+
             Debug.Log(parser.Current.GetType());
-            if (ds1 != null)
+
+            int count = 0;
+            var ds1 = parser.Allow<MappingStart>();
+            while (ds1 != null)
             {
                 Debug.Log(ds1.Anchor);
                 Debug.Log(ds1.Tag);
-                Debug.Log(ds.Version);
-                Debug.Log(ds.ToString());
+                var obj = deserializer.Deserialize(parser);
+                Debug.Log(obj);
+                Debug.Log(parser.Current.GetType());
+                ds1 = parser.Allow<MappingStart>();
+                if (count ++ > 100)
+                {
+                    break;
+                }
             }
         }
       
