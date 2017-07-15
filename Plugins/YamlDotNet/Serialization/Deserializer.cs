@@ -279,7 +279,6 @@ namespace YamlDotNet.Serialization
         {
             return (T)Deserialize(parser, typeof(T));
         }
-
         public object Deserialize(IParser parser)
         {
             return Deserialize(parser, typeof(object));

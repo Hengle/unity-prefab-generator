@@ -37,6 +37,7 @@ public class InformationTest
     [Test]
     public void PrintPrefabInfo2()
     {
+        Dictionary<long, YamlUserModel.YamlObjBase> dataDic = new Dictionary<long, YamlUserModel.YamlObjBase>();
         var prefabPath = "Assets/Prefab-Generator/Editor/Test/Cube.prefab";
         var input = new StreamReader(prefabPath, Encoding.UTF8);
         var deserializer = new DeserializerBuilder().Build();
@@ -46,46 +47,35 @@ public class InformationTest
         StreamStart start = parser.Expect<StreamStart>();
         if (start != null)
         {
-            #region Prefab
-            Debug.Log(parser.Current.GetType());
-            var ds = parser.Expect<DocumentStart>();
-            Debug.Log(ds);
+            int count = 0;
+            while (parser.Current is DocumentStart)
+            {
+                if (count++ > 100) return;
+                
+                #region Prefab
+                Debug.Log(parser.Current.GetType());
+                var ds = parser.Expect<DocumentStart>();
+                Debug.Log(ds);
 
-            Debug.Log(parser.Current.GetType());
-            var sd = parser.Expect<MappingStart>();
-            Debug.Log(sd.ToString());
+                Debug.Log(parser.Current.GetType());
+                var sd = parser.Expect<MappingStart>();
+                Debug.Log(sd.ToString());
 
-            Debug.Log(parser.Current.GetType());
-            var sr = parser.Expect<YamlDotNet.Core.Events.Scalar>();
-            Debug.Log(sr.Value);
+                Debug.Log(parser.Current.GetType());
+                var sr = parser.Expect<YamlDotNet.Core.Events.Scalar>();
+                Debug.Log(sr.Value);
 
-            Debug.Log(parser.Current.GetType());
-            var prefab = deserializer.Deserialize<YamlUserModel.Prefab>(parser);
-            parser.Expect<MappingEnd>();
-            Debug.Log(prefab);
+                Debug.Log(parser.Current.GetType());
+                var prefab = deserializer.Deserialize(parser, Type.GetType("YamlUserModel." + sr.Value));
+                parser.Expect<MappingEnd>();
+                Debug.Log(prefab);
+                YamlUserModel.YamlObjBase obj = prefab as YamlUserModel.YamlObjBase;
+                dataDic.Add(long.Parse(sd.Anchor), obj);
 
-            Debug.Log(parser.Current.GetType());
-            parser.Expect<DocumentEnd>();
-            #endregion
-
-            #region Prefab
-            Debug.Log(parser.Current.GetType());
-            ds = parser.Expect<DocumentStart>();
-            Debug.Log(ds);
-
-            Debug.Log(parser.Current.GetType());
-            sd = parser.Expect<MappingStart>();
-            Debug.Log(sd.ToString());
-
-            Debug.Log(parser.Current.GetType());
-            sr = parser.Expect<YamlDotNet.Core.Events.Scalar>();
-            Debug.Log(sr.Value);
-
-            Debug.Log(parser.Current.GetType());
-            var gameObj = deserializer.Deserialize<YamlUserModel.GameObject>(parser);
-            parser.Expect<MappingEnd>();
-            Debug.Log(gameObj);
-            #endregion
+                Debug.Log(parser.Current.GetType());
+                parser.Expect<DocumentEnd>();
+                #endregion
+            }
         }
 
     }

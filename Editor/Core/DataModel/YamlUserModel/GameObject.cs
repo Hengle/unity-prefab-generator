@@ -2,6 +2,8 @@
 {
     public class GameObject: YamlObjBase
     {
+        public InFileHold m_PrefabParentObject { get; set; }
+        public InFileHold m_PrefabInternal { get; set; }
         public long serializedVersion { get; set; }
         public Component[] m_Component { get; set; }
         public int m_Layer { get; set; }
