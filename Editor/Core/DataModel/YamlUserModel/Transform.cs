@@ -1,11 +1,7 @@
 ﻿namespace YamlUserModel
 {
-    public class Transform
+    public class Transform:YamlComponentBase
     {
-        public long m_ObjectHideFlags { get; set; }
-        public InFileHold m_PrefabParentObject { get; set; }
-        public InFileHold m_PrefabInternal { get; set; }
-        public InFileHold m_GameObject { get; set; }
         public UnityEngine.Quaternion m_LocalRotation { get; set; }
         public UnityEngine.Vector3 m_LocalPosition { get; set; }
         public UnityEngine.Vector3 m_LocalScale { get; set; }

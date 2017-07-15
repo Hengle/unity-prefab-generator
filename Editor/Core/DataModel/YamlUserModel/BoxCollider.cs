@@ -1,11 +1,7 @@
 ﻿namespace YamlUserModel
 {
-   public class BoxCollider
+   public class BoxCollider:YamlComponentBase
     {
-        public long m_ObjectHideFlags { get; set; }
-        public InFileHold m_PrefabParentObject { get; set; }
-        public InFileHold m_PrefabInternal { get; set; }
-        public InFileHold m_GameObject { get; set; }
         public InFileHold m_Material { get; set; }
         public int m_IsTrigger { get; set; }
         public int m_Enabled { get; set; }

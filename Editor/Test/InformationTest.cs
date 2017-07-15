@@ -46,6 +46,8 @@ public class InformationTest
         StreamStart start = parser.Expect<StreamStart>();
         if (start != null)
         {
+            #region Prefab
+            Debug.Log(parser.Current.GetType());
             var ds = parser.Expect<DocumentStart>();
             Debug.Log(ds);
 
@@ -58,15 +60,32 @@ public class InformationTest
             Debug.Log(sr.Value);
 
             Debug.Log(parser.Current.GetType());
-            //sd = parser.Expect<MappingStart>();
-            Debug.Log(sd.ToString());
-
-            //Debug.Log(string.Format("{0}.{0}", ds.Version.Version.Major, ds.Version.Version.Minor));
             var prefab = deserializer.Deserialize<YamlUserModel.Prefab>(parser);
+            parser.Expect<MappingEnd>();
             Debug.Log(prefab);
 
-            //var gameobj = deserializer.Deserialize<YamlUserModel.GameObject>(parser);
-            //Debug.Log(gameobj);
+            Debug.Log(parser.Current.GetType());
+            parser.Expect<DocumentEnd>();
+            #endregion
+
+            #region Prefab
+            Debug.Log(parser.Current.GetType());
+            ds = parser.Expect<DocumentStart>();
+            Debug.Log(ds);
+
+            Debug.Log(parser.Current.GetType());
+            sd = parser.Expect<MappingStart>();
+            Debug.Log(sd.ToString());
+
+            Debug.Log(parser.Current.GetType());
+            sr = parser.Expect<YamlDotNet.Core.Events.Scalar>();
+            Debug.Log(sr.Value);
+
+            Debug.Log(parser.Current.GetType());
+            var gameObj = deserializer.Deserialize<YamlUserModel.GameObject>(parser);
+            parser.Expect<MappingEnd>();
+            Debug.Log(gameObj);
+            #endregion
         }
 
     }
