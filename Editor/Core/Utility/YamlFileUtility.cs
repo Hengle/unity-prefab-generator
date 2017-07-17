@@ -136,8 +136,6 @@ public static class YamlFileUtility
         var yaml = new YamlStream();
         foreach (var item in documents)
         {
-            writer.Write(item.RootNode.Tag);
-            UnityEngine.Debug.Log(item.RootNode.Tag);// = "!u!" + item.RootNode.Anchor.Substring(0,3);
             yaml.Add(item);
         }
        

@@ -712,25 +712,26 @@ namespace YamlDotNet.Core
                     AppendTagDirectiveTo(tagDirective, false, tagDirectives);
                 }
 
-                foreach (var tagDirective in Constants.DefaultTagDirectives)
+                if (tagDirectives.Count == 0)
                 {
-                    AppendTagDirectiveTo(tagDirective, true, tagDirectives);
-                }
-
-                if (documentTagDirectives.Count > 0)
-                {
-                    isImplicit = false;
                     foreach (var tagDirective in Constants.DefaultTagDirectives)
                     {
-                        AppendTagDirectiveTo(tagDirective, true, documentTagDirectives);
+                        AppendTagDirectiveTo(tagDirective, true, tagDirectives);
                     }
+                }
+                string tag = "";
 
-                    foreach (var tagDirective in documentTagDirectives)
+                if (tagDirectives.Count > 0)
+                {
+                    isImplicit = false;
+
+                    foreach (var tagDirective in tagDirectives)
                     {
-                        WriteIndicator("%TAG", true, false, false);
-                        WriteTagHandle(tagDirective.Handle);
-                        WriteTagContent(tagDirective.Prefix, true);
-                        WriteIndent();
+                        //WriteIndicator("%TAG", true, false, false);
+                        //WriteTagHandle(tagDirective.Handle);
+                        //WriteTagContent(tagDirective.Prefix, true);
+                        tag = tagDirective.Handle + tagDirective.Prefix.Replace("tag:unity3d.com,2011:", "");
+                        //WriteIndent();
                     }
                 }
 
@@ -742,7 +743,7 @@ namespace YamlDotNet.Core
                 if (!isImplicit)
                 {
                     WriteIndent();
-                    WriteIndicator("---", true, false, false);
+                    WriteIndicator("--- " + tag, true, false, false);
                     if (isCanonical)
                     {
                         WriteIndent();

@@ -109,7 +109,7 @@ public class InformationTest
         var prefabPath1 = "Assets/Prefab-Generator/Editor/Test/Cube1.prefab";
         var docs = YamlFileUtility.LoadYamlDocuments(prefabPath);
         Debug.Assert(docs != null);
-        var number = YamlFileUtility.SurchNode(docs, "114395603615736828", "number");
+        var number = YamlFileUtility.SurchNode(docs, "114889919418469578", "number");
         Debug.Log("number" + number);
         var num = number as YamlScalarNode;
         num.Value = "100";

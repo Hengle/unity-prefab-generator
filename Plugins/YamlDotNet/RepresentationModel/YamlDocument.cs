@@ -176,8 +176,9 @@ namespace YamlDotNet.RepresentationModel
             {
                 AssignAnchors();
             }
-
-            emitter.Emit(new DocumentStart());
+            var tagDir = new TagDirectiveCollection();
+            tagDir.Add(new Core.Tokens.TagDirective("!u!", RootNode.Tag));
+            emitter.Emit(new DocumentStart(null, tagDir, false));
             RootNode.Save(emitter, new EmitterState());
             emitter.Emit(new DocumentEnd(false));
         }
