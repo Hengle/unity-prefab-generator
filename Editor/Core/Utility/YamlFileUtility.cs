@@ -142,5 +142,6 @@ public static class YamlFileUtility
         yaml.Save(writer);
         writer.Flush();
         writer.Close();
+        //此时生成的格式和unity内置的不一样，但是！！！unity会自己生成标准格式
     }
 }

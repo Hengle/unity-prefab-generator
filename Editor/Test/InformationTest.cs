@@ -113,7 +113,6 @@ public class InformationTest
         Debug.Log("number" + number);
         var num = number as YamlScalarNode;
         num.Value = "100";
-
         YamlFileUtility.WritePrefabFile(docs, prefabPath1);
     }
 }
