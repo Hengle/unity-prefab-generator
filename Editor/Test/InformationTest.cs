@@ -28,56 +28,93 @@ public class InformationTest
             YamlMappingNode root = item.RootNode as YamlMappingNode;
             foreach (var yitem in root.Children)
             {
-                Debug.Log("[Root] " + yitem.Key + "\n" + "[Tag:]" + item.RootNode.Tag + "\n" + "[Anchor:]" + item.RootNode.Anchor + "\n");
-                Debug.Log("[value] " + yitem.Value);
+                Debug.Log(
+                    "[Root1] " + item.RootNode + "\n" + 
+                    "[Root2] " + yitem.Key + "\n" +
+                    "[Tag:]" + item.RootNode.Tag + "\n" + 
+                    "[Anchor:]" + item.RootNode.Anchor + "\n");
+                Debug.Log(yitem.Value["m_ObjectHideFlags"]);
+                //Debug.Log(yitem.Value["m_Modification"]["m_TransformParent"]["fileID"]);
+                switch (yitem.Value.NodeType)
+                {
+                    case YamlNodeType.Alias:
+                        break;
+                    case YamlNodeType.Mapping:
+                        var map1 = yitem.Value as YamlMappingNode;
+                        Debug.Log("[child count:] " + map1.Children.Count);
+                        foreach (var citem in map1.Children)
+                        {
+                            Debug.Log(citem.Key + ":" + citem.Value);
+                        }
+                        break;
+                    case YamlNodeType.Scalar:
+                        Debug.Log("[Scalar] " + yitem.Value);
+                        break;
+                    case YamlNodeType.Sequence:
+                        break;
+                    default:
+                        break;
+                }
             }
         }
+        var savePath = "Assets/Prefab-Generator/Editor/Test/Cube1.prefab";
+
+        //string head = @"prefab";
+        var writer = new StreamWriter(savePath);
+        yaml.Save(writer);
+        writer.Flush();
+        writer.Close();
     }
 
     [Test]
     public void PrintPrefabInfo2()
     {
-        Dictionary<long, YamlUserModel.YamlObjBase> dataDic = new Dictionary<long, YamlUserModel.YamlObjBase>();
         var prefabPath = "Assets/Prefab-Generator/Editor/Test/Cube.prefab";
         var input = new StreamReader(prefabPath, Encoding.UTF8);
         var deserializer = new DeserializerBuilder().Build();
-
         var parser = new Parser(input);
         // Consume the stream start event "manually"
-        StreamStart start = parser.Expect<StreamStart>();
-        if (start != null)
+        /*StreamStart start = */parser.Expect<StreamStart>();
+        while (parser.Current is DocumentStart)
         {
-            int count = 0;
-            while (parser.Current is DocumentStart)
-            {
-                if (count++ > 100) return;
-                
-                #region Prefab
-                Debug.Log(parser.Current.GetType());
-                var ds = parser.Expect<DocumentStart>();
-                Debug.Log(ds);
+            #region Prefab
+            //Debug.Log(parser.Current.GetType());
+            /*var ds = */parser.Expect<DocumentStart>();
+            //Debug.Log(ds);
 
-                Debug.Log(parser.Current.GetType());
-                var sd = parser.Expect<MappingStart>();
-                Debug.Log(sd.ToString());
+            //Debug.Log(parser.Current.GetType());
+            /*var sd = */parser.Expect<MappingStart>();
+            //Debug.Log(sd.ToString());
 
-                Debug.Log(parser.Current.GetType());
-                var sr = parser.Expect<YamlDotNet.Core.Events.Scalar>();
-                Debug.Log(sr.Value);
+            //Debug.Log(parser.Current.GetType());
+            var sr = parser.Expect<YamlDotNet.Core.Events.Scalar>();
+            Debug.Log(sr.Value);
 
-                Debug.Log(parser.Current.GetType());
-                var prefab = deserializer.Deserialize(parser, Type.GetType("YamlUserModel." + sr.Value));
-                parser.Expect<MappingEnd>();
-                Debug.Log(prefab);
-                YamlUserModel.YamlObjBase obj = prefab as YamlUserModel.YamlObjBase;
-                dataDic.Add(long.Parse(sd.Anchor), obj);
+            //Debug.Log(parser.Current.GetType());
+            /*var prefab = */deserializer.Deserialize(parser, Type.GetType("YamlUserModel." + sr.Value));
+            parser.Expect<MappingEnd>();
+            //Debug.Log(prefab);
 
-                Debug.Log(parser.Current.GetType());
-                parser.Expect<DocumentEnd>();
-                #endregion
-            }
+            //Debug.Log(parser.Current.GetType());
+            parser.Expect<DocumentEnd>();
+            #endregion
         }
+        
+    }
 
+    [Test]
+    public void YamlFileUtilitTest()
+    {
+        var prefabPath = "Assets/Prefab-Generator/Editor/Test/Cube.prefab";
+        var prefabPath1 = "Assets/Prefab-Generator/Editor/Test/Cube1.prefab";
+        var docs = YamlFileUtility.LoadYamlDocuments(prefabPath);
+        Debug.Assert(docs != null);
+        var number = YamlFileUtility.SurchNode(docs, "114395603615736828", "number");
+        Debug.Log("number" + number);
+        var num = number as YamlScalarNode;
+        num.Value = "100";
+
+        YamlFileUtility.WritePrefabFile(docs, prefabPath1);
     }
 }
 /*%YAML 1.1
