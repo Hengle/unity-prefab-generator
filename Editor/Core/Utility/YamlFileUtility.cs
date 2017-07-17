@@ -144,4 +144,19 @@ public static class YamlFileUtility
         writer.Close();
         //此时生成的格式和unity内置的不一样，但是！！！unity会自己生成标准格式
     }
+    public static string[] FindIDByName(List<YamlDocument> documents,string rootName)
+    {
+        List<string> ids = new List<string>();
+        foreach (var item in documents)
+        {
+            foreach (var child in (item.RootNode as YamlMappingNode).Children)
+            {
+                if (child.Key.ToString() == rootName)
+                {
+                    ids.Add(item.RootNode.Anchor);
+                }
+            }
+        }
+        return ids.ToArray();
+    }
 }
