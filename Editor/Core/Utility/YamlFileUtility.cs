@@ -88,7 +88,7 @@ public static class YamlFileUtility
         yaml.Load(input);
         return yaml.Documents.ToList();
     }
-    public static YamlNode SurchNode(List<YamlDocument> docs, params object[] path)
+    public static YamlNode LocateNode(List<YamlDocument> docs, params object[] path)
     {
         if (docs == null || path.Length < 2)
         {

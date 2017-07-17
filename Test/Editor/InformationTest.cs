@@ -103,16 +103,29 @@ public class InformationTest
     }
 
     [Test]
-    public void YamlFileUtilitTest()
+    public void YamlPrefabFileUtilitTest()
     {
         var prefabPath = "Assets/Prefab-Generator/Editor/Test/Cube.prefab";
         var prefabPath1 = "Assets/Prefab-Generator/Editor/Test/Cube1.prefab";
         var docs = YamlFileUtility.LoadYamlDocuments(prefabPath);
         Debug.Assert(docs != null);
-        var number = YamlFileUtility.SurchNode(docs, "114889919418469578", "number");
+        var number = YamlFileUtility.LocateNode(docs, "114889919418469578", "number");
         Debug.Log("number" + number);
         var num = number as YamlScalarNode;
         num.Value = "100";
+        YamlFileUtility.WritePrefabFile(docs, prefabPath1);
+    }
+    [Test]
+    public void YamlSceneFileUtilitTest()
+    {
+        var prefabPath = "Assets/Prefab-Generator/Editor/Test/S.unity";
+        var prefabPath1 = "Assets/Prefab-Generator/Editor/Test/S1.unity";
+        var docs = YamlFileUtility.LoadYamlDocuments(prefabPath);
+        Debug.Assert(docs != null);
+        var m_Colorr = YamlFileUtility.LocateNode(docs, "105585041", "m_Color","r");
+        Debug.Log("m_Colorr" + m_Colorr);
+        var newColor = m_Colorr as YamlScalarNode;
+        newColor.Value = "0";
         YamlFileUtility.WritePrefabFile(docs, prefabPath1);
     }
 }
