@@ -1,0 +1,29 @@
+
+LICENSE SYSTEM [2017718 13:58:17] No start/stop license dates set
+
+LICENSE SYSTEM [2017718 13:58:17] Next license update check is after 2017-07-19T03:04:53
+
+Built from '2017.1/release' branch; Version is '2017.1.0f3 (472613c02cf7) revision 4662803'; Using compiler version '160040219'
+OS: 'Windows 7 Service Pack 1 (6.1.7601) 64bit' Language: 'zh' Physical Memory: 12236 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+D:\Program Files\Unity2017\Editor\Unity.exe
+-batchmode
+-quit
+-projectPath
+E:/Githubs/Prefab-Generator/
+-logFile
+abbuild.log
+-executeMethod
+UnityEngine.AssetBundles.GraphTool.CUIUtility.BuildFromCommandline
+Successfully changed project path to: E:/Githubs/Prefab-Generator/
+E:/Githubs/Prefab-Generator
+It looks like another Unity instance is running with this project open.
+
+Multiple Unity instances cannot open the same project.
+
+Project: E:/Githubs/Prefab-Generator
+ 
+(Filename: C:\buildslave\unity\build\Editor/Src/Application.cpp Line: 356)
+

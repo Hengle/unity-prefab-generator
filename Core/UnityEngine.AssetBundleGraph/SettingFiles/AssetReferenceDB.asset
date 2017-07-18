@@ -1,0 +1,1341 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee4bc21567f434b598a3c96ba4946372, type: 3}
+  m_Name: AssetReferenceDB
+  m_EditorClassIdentifier: 
+  m_assets:
+  - m_assetDatabaseId: 2ba9c0693e08812429c125ed7e94019e
+    m_importFrom: Assets/Prefab-Generator/Core/Editor/DataModel/BlackboardSource.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 195c17547cdf3aa4c94fba99cb7941d2
+    m_importFrom: Assets/Prefab-Generator/Core/Editor/DataModel/ObjHold.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 9f4f3d80acb154b478dfff139f461e21
+    m_importFrom: Assets/Prefab-Generator/Core/Editor/DataModel/PGAsset.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: ddacaeaa9ce60634ab9efdd51ce1e421
+    m_importFrom: Assets/Prefab-Generator/Core/Editor/DataModel/Variable.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: f2a7aebf9256a94439256a03ce79ce10
+    m_importFrom: Assets/Prefab-Generator/Core/Editor/GUI/PGWindow.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: d8602aab864523647bb6a3a7630dc996
+    m_importFrom: Assets/Prefab-Generator/Core/Editor/Interface/IObjectInfomation.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 5c86945030911354d8e004c884a48c21
+    m_importFrom: Assets/Prefab-Generator/Core/Editor/Interface/IPrefabsCreater.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 867557ca6c28823429b4b1651b83c0d2
+    m_importFrom: "Assets/Prefab-Generator/Core/Editor/System/\u5404\u4E2A\u6A21\u5757.txt"
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEngine.TextAsset, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 0ea672e38b6dff54aa56988aa8d34f19
+    m_importFrom: Assets/Prefab-Generator/Core/Editor/Template/Modify.cs.temp
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.DefaultAsset, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: ff868327179a53d4d99651ad1d9972e6
+    m_importFrom: Assets/Prefab-Generator/Core/Editor/Utility/PGUtility.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: be73ecb7a8b306643ac49d9abed2377c
+    m_importFrom: Assets/Prefab-Generator/Core/Editor/Utility/ReflectionTools.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 84b381972f879c74d83a6d15ad1d458e
+    m_importFrom: Assets/Prefab-Generator/Core/Editor/Utility/StringUtils.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 651c3d92625590540a6df9009511a87f
+    m_importFrom: Assets/Prefab-Generator/Core/Editor/Utility/YamlFileUtility.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: eebafc2a713ca6c41abdcbbec6fef574
+    m_importFrom: Assets/Prefab-Generator/Demo/PrefabAssetObj/PGAsset.asset
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: PrefabGenerate.PGAsset, Assembly-CSharp-Editor, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_assetDatabaseId: 648f41788b5fd5a4eadad5b8f316ea4d
+    m_importFrom: Assets/Prefab-Generator/Demo/Test/Editor/InformationTest.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: df472a15b4c5fbe4db8ec285bdfb5066
+    m_importFrom: Assets/Prefab-Generator/Demo/Test/Cube.prefab
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEngine.GameObject, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 949d9406809c6234bb183eff29c57518
+    m_importFrom: Assets/Prefab-Generator/Demo/Test/Cube1.prefab
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEngine.GameObject, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 8a55973a05552e94682125cab251f0a1
+    m_importFrom: Assets/Prefab-Generator/Demo/Test/S.unity
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.SceneAsset, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 9204cf7c881bad64d972aaf99430b8af
+    m_importFrom: Assets/Prefab-Generator/Demo/Test/S1.unity
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.SceneAsset, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: c46a118a943c13146ac6a5659d00a99f
+    m_importFrom: Assets/Prefab-Generator/Demo/Test/Test1.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: bbfd2a0aa5db8fa4ebbc77fff494fff8
+    m_importFrom: Assets/Prefab-Generator/Demo/Test/Test2.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 09b29b54793d9644398fe8e4da326353
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Events/AnchorAlias.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: e96511072ac5a30488623987ca605570
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Events/Comment.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 99b4ea3b75d2e754cb5fea7cc0f1a4d3
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Events/DocumentEnd.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 06cc13f1bc1622246924546d044eede9
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Events/DocumentStart.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 3a7e249b62575e048929c7a3e0420470
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Events/EventType.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 34cdef8e5d4918149bf7185da865504b
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Events/IParsingEventVisitor.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 32f12dd96a8cb4d4792ed76749f67b38
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Events/MappingEnd.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 79e25e33bd9642a4ca1c8c5280b30984
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Events/MappingStart.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 7bc885bebca1fac428d7482f06b4f41e
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Events/MappingStyle.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 4fa0681239f68a3468223fe925e01d33
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Events/NodeEvent.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 5dcecbbabc813c74bb16837d87a36f7e
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Events/ParsingEvent.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 7c9ef7a4a2cc85b40aea8fda0d00cb33
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Events/Scalar.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 37a7a63228a311b46ae903ea604105df
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Events/SequenceEnd.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: d0414698332e0c643ad3fddd1b907b5e
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Events/SequenceStart.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: f66466d1eedabbe4db084d2d0e64415b
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Events/SequenceStyle.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 703673d959fca474691646e24e9ccedb
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Events/StreamEnd.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 8127a5c9cbbe94547a9c1d39fee327db
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Events/StreamStart.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 20dff0ad997e6bf4fb74167f52869056
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Tokens/Anchor.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 5888a3fb8858cd9419759f27390f4801
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Tokens/AnchorAlias.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 0ac69775d00ee4d4ba4b918c06086302
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Tokens/BlockEnd.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: c3a1850190300d5479da07fdb53767f0
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Tokens/BlockEntry.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 9f8bc35d16193164aaee492bc767e9f8
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Tokens/BlockMappingStart.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 827b4413642f10d4891e4b1771c5ad45
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Tokens/BlockSequenceStart.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 7faa8193237a87f41aa6e2a84836b348
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Tokens/Comment.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: b70a27ee4c4c7c24e9df5b0ec3a2c6da
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Tokens/DocumentEnd.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 2c86a143ce13faf4e90cece89b865c8a
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Tokens/DocumentStart.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: f6de9d5d89c756c49882403cf8b79eed
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Tokens/FlowEntry.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 6e66c86850cf7a545bfa90d7c9b1831a
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Tokens/FlowMappingEnd.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: d357652b21a405949a837dbef084c7e3
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Tokens/FlowMappingStart.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 5338410489b921f4c873cbed0c5b7754
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Tokens/FlowSequenceEnd.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 8248df61d7f1e7e4fbd6db14a760c5cd
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Tokens/FlowSequenceStart.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: d3197efde30ce804d81b7698c3c9c5a6
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Tokens/Key.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: d8a37767e1f6b1949b357766c6f98776
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Tokens/Scalar.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 7f214337aa3dd71439c3a1ee6e5ef79d
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Tokens/StreamEnd.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: c0787d33a81177840836ef7dba3d0b75
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Tokens/StreamStart.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 2c6cb793327f6a349964aa8538bc1e33
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Tokens/Tag.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: dc25c68d7148e424ba5d875871c1aec8
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Tokens/TagDirective.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 9674e003fb73bba4cbf5ab487614a0d8
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Tokens/Token.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 0fe0dfc9c858f2248a691e2f52bdfdff
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Tokens/Value.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 5e236aab8cd03d94295778001f592ec1
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Tokens/VersionDirective.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: bef940054d2c25041ba1a961abae6c79
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/AnchorNotFoundException.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: cdb65e878b6f92347849551efad9eb74
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/CharacterAnalyzer.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 6143f3f95b0bcb74c92b9996309fab40
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Constants.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: b4262bdec0f3c254b9a29e755ba3a609
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Cursor.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: f526134efcd8e424c86e492f85fc56ba
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Emitter.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 7127212075b19ce4f99a370f02d26037
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/EmitterState.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 2d01575f74bb894458c14178b7ee54d0
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/FakeList.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 4a2bedb057911514fb2a96c1cc2db68d
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/ForwardAnchorNotSupportedException.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 2cb3fe21d8ebcf0458b6008e1ba2ac08
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/HashCode.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: ea595b7247a52d84796adae58a272de0
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/IEmitter.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 574e18619ff79614f83b7fbaec47ae8c
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/ILookAheadBuffer.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: d5ebdfa25d33598469684afe6f672277
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/InsertionQueue.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: fc2416e849d87aa4598d335c421f7117
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/IParser.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: f5c28b5ab2d236944a6f5f2858aa75d8
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/IScanner.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 4d909b1f8d7468e4188667b8b706d225
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/LookAheadBuffer.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 9a02d917bb4d2164ea20caaafce2bb0b
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Mark.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: e4964c5da9dbb7245bf01fd55f6fe5ed
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/MaximumRecursionLevelReachedException.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 2aee5019246749c40a971ff855ffba79
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/MergingParser.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 26cca4bc9fdfb2d429b2181c273ab7b7
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Parser.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 66d3fba9b1372874692968ce91d5bdef
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/ParserExtensions.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 4c73f39f4ccd4a644bd851bffd5afa20
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/ParserState.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 1bfe84905c0dd5245908543c8cca9169
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/RecursionLevel.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: d8499f656f1f893409f937b46c386cf2
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/ScalarStyle.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: c0682a65176cd1c42807d5c990f0cc8f
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Scanner.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: ce6eb4a71fe0a504cb2efded3a4ad217
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/SemanticErrorException.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 98526770a341dd64aaf15fb3fe79a6c1
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/SimpleKey.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: b821a24261c0caf46b4f2267068dfa19
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/StringLookAheadBuffer.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: fd15bbcb74a3b3c49bcbbc67093b631d
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/SyntaxErrorException.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: c5901f69158709e4395e0e73e80c1fc2
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/TagDirectiveCollection.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 03439ca56e1dbbc4882676e8255f06c1
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/Version.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 18ae75fcd5b1676418d42ac4d2c824c5
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Core/YamlException.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 6c2d347068a20b442a3cdbf631ad8ab3
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Examples/Helpers/ExampleRunner.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 6bda79cf503a621448a23f79270d7184
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Examples/Helpers/SampleAttribute.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: d8ac1e6d1ee681b4796f24feda0ca81d
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Examples/Helpers/TestOutputHelperExtensions.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 83e73fe5645753f4fbbca24d77bc6a66
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Examples/ConvertYamlToJson.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 97155601043b6734ab06eaf3989b828a
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Examples/DeserializeObjectGraph.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: f3200cc07f84b324e95a6e173a3a4206
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Examples/DeserializingMultipleDocuments.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 29c4a0e11ccbfef4bac57240ea978b91
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Examples/LoadingAYamlStream.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 61d71e4f1e5e17c469a4362b7b1a7665
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Examples/SerializeObjectGraph.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: b3ef112ac5442354085c4e3adaf8c612
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Helpers/ExpressionExtensions.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: c773704ccfcc20642a3e3fa7f77562b6
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Helpers/GenericCollectionToNonGenericAdapter.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: cffb108910d12a64da4065701f0ae0bf
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Helpers/GenericDictionaryToNonGenericAdapter.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 8bf0bb99b386041429154edb2eec127f
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Helpers/ITestOutputHelper.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 7ad2c6ea921f63842a2787da8eb89b15
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Helpers/Portability.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 5b2c2b39b93a5fa4a973c6e52accea86
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/RepresentationModel/DocumentLoadingState.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: c3761b6b22a04a24fade56273bbb3c5b
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/RepresentationModel/EmitterState.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: e12b6dd8690a6674696c7a997fdbd895
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/RepresentationModel/IYamlVisitor.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 72c7427f0fab35849b7545d301debcd5
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/RepresentationModel/YamlAliasNode.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: aa500eae79de1e8429a325722afbf4e8
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/RepresentationModel/YamlDocument.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 283c72dc1a159584988a79dd9d0a0a93
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/RepresentationModel/YamlMappingNode.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: b80625eae8f97124f832aed15c4c6b57
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/RepresentationModel/YamlNode.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 70ec622c4d503a448ba4d5410c55d8bd
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/RepresentationModel/YamlNodeIdentityEqualityComparer.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 2e67e7d5ff0719c4ebac2a3aa246b96a
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/RepresentationModel/YamlNodeType.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: d8152305d4536da4c91eb19aa04b401c
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/RepresentationModel/YamlScalarNode.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 58e9eea9b495b2f478b639f1d20a8951
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/RepresentationModel/YamlSequenceNode.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 8da956833fe9bb440be293c2b18b1e29
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/RepresentationModel/YamlStream.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: f0c6d456c0cd3544f98e1dac39bf17ed
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/RepresentationModel/YamlVisitor.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: a982636aeeff0ee41b6666f4ae01957e
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/RepresentationModel/YamlVisitorBase.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 605a13412ac29ee4498bff2668e80505
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/Converters/DateTimeConverter.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 2034b2a36cbe85a438addb075cff648b
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/Converters/GuidConverter.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: ccb97ea0d5b5aff4d93a807363ef3ec7
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/EventEmitters/ChainedEventEmitter.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 0cc50ca841931e244afaf9442602a1c7
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/EventEmitters/CustomTagEventEmitter.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 62580a3e5f0e5314e83b62758257428e
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/EventEmitters/JsonEventEmitter.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: e1b82bb57f4eb7f4ba0ffad467f82555
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/EventEmitters/TypeAssigningEventEmitter.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: f2ea019325fb629499443d6af969a295
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/EventEmitters/WriterEventEmitter.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 32043fa3c3d7af6489b8238353dcf810
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/NamingConventions/CamelCaseNamingConvention.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: d393465f17a55814a8ecb04e77f1e25c
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/NamingConventions/HyphenatedNamingConvention.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 1f1957c241ea377499c1656388ff9122
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/NamingConventions/NullNamingConvention.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 0514b2a4f30517e42bc79c445fe75383
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/NamingConventions/PascalCaseNamingConvention.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: dc07ca72c2bad00498d0cd0594f69151
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/NamingConventions/UnderscoredNamingConvention.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 20118ab09905856488b432270429ae5b
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/NodeDeserializers/ArrayNodeDeserializer.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: d789c999a074aa34fbf2ccddd0d570a2
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/NodeDeserializers/CollectionNodeDeserializer.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 57789f348c365ce439f2085df1b24b73
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/NodeDeserializers/DictionaryNodeDeserializer.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 4b63af2cc4a9f5d4cbbadbdac863e5df
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/NodeDeserializers/EnumerableNodeDeserializer.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 2dc4eb3386e00254a90e737f7663d298
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/NodeDeserializers/NullNodeDeserializer.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 203cafd2ca433854ab6bb7dcc51b861a
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/NodeDeserializers/ObjectNodeDeserializer.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: acae7a1311005a143be6454d8b86b947
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/NodeDeserializers/ScalarNodeDeserializer.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: a4dc6d0569fe722448b3d925a66e2b45
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/NodeDeserializers/TypeConverterNodeDeserializer.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 4022214c4cbb6be40b7ad73e0620dc0c
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/NodeDeserializers/YamlConvertibleNodeDeserializer.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: dd9decb2273378147889a787cb6bb8e1
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/NodeDeserializers/YamlSerializableNodeDeserializer.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: a96ce7ab22cdeb245a28967001844e3f
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/NodeTypeResolvers/DefaultContainersNodeTypeResolver.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 699369e47bae32e4b87e9bcb955ee742
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/NodeTypeResolvers/TagNodeTypeResolver.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: abbd2aba7e216f54a8353afcce646479
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/NodeTypeResolvers/TypeNameInTagNodeTypeResolver.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: e5460e40e01a3dd49a5ad78b1e3ece14
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/NodeTypeResolvers/YamlConvertibleTypeResolver.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 69c24ee7afe12c1479e4bfd7e8595b7f
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/NodeTypeResolvers/YamlSerializableTypeResolver.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: d85c04bcbb9823e428994436b556c0c4
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/ObjectFactories/DefaultObjectFactory.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 2ad19c2ee12f0cd41a32cf7dfe446c07
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/ObjectFactories/LambdaObjectFactory.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 4d75872db0e63bf4e829d39ab3d05abd
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/ObjectGraphTraversalStrategies/FullObjectGraphTraversalStrategy.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: cc11b2a2ab4f92a4683501db76ecc278
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/ObjectGraphTraversalStrategies/RoundtripObjectGraphTraversalStrategy.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: c7a4420c17a267847b8d6973ad99346a
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/ObjectGraphVisitors/AnchorAssigner.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 7c8b5b39c74f14248971b3c1a4ec83b2
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/ObjectGraphVisitors/AnchorAssigningObjectGraphVisitor.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 91c55744c252b51459a0c70f40c47827
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/ObjectGraphVisitors/ChainedObjectGraphVisitor.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 180ba37056bdea24393986bdab81340d
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/ObjectGraphVisitors/CustomSerializationObjectGraphVisitor.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 6f0bed3472e6485468490ba7cf5c910e
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/ObjectGraphVisitors/DefaultExclusiveObjectGraphVisitor.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 23b01227eabbc3c4eb0e2658ac27b23d
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/ObjectGraphVisitors/EmittingObjectGraphVisitor.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: f25be0bb475b7bc41b17713e640b1a93
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/ObjectGraphVisitors/PreProcessingPhaseObjectGraphVisitorSkeleton.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 2831decc4a6e7dd49b872c7ae62d2568
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/TypeInspectors/CachedTypeInspector.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 3598909e9935cc3428cc982eb6802c40
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/TypeInspectors/NamingConventionTypeInspector.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: b92a938ba5e921c4e92072dc91a2ab2b
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/TypeInspectors/ReadableAndWritablePropertiesTypeInspector.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: c9669f90a0f2f2a41b805a174d9be97e
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/TypeInspectors/ReadablePropertiesTypeInspector.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: ed437999b4d95dd4094909044396a0b2
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/TypeInspectors/TypeInspectorSkeleton.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 28ddf494ebac7fe4fb7704de7713a111
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/TypeResolvers/DynamicTypeResolver.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 684d1820910272c41957060731567d5c
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/TypeResolvers/StaticTypeResolver.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 0a1b0915df335f34aa94272237836de2
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/Utilities/IPostDeserializationCallback.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 2e3d78e3d62429040a9c8ab6066499ae
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/Utilities/ObjectAnchorCollection.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: a47e4ee72331a6b4aaf1b7abd7b76d6d
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/Utilities/ReflectionUtility.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: c783e372f00ca8e42a66fe82bbbe3fd2
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/Utilities/SerializerState.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: b5dcdcf416fdbed4faabbba800ede39a
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/Utilities/StringExtensions.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 6450212473c552045b5fcfa8b6b759a3
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/Utilities/TypeConverter.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 2b42e3b48f16da04d81b23e165d66fc3
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/ValueDeserializers/AliasValueDeserializer.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 3782a2b6c58f1ae459162e3ce74fc25f
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/ValueDeserializers/NodeValueDeserializer.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: c7b13de2cbd93db41846cb9bcb2e3968
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/BuilderSkeleton.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: cee7b8e2c23b44c4c9d8b6fa9029e350
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/Deserializer.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: f8eedbdb2d60b5c438d13b57396f5565
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/DeserializerBuilder.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: bb4122e230b42de4cb90854ba842578c
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/EmissionPhaseObjectGraphVisitorArgs.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: e72f96c4049a0dc4d97ad0d44f6b766d
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/EventInfo.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 3a934679d1d7f204e9d25f18f7f397bb
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/IAliasProvider.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 05f7588b91e030f438b48c4af7ecf613
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/IEventEmitter.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: f9e2e0524133523428f9f2498f7c06f7
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/INamingConvention.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 2f27d06ef3f08024d8a6ee848351527a
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/INodeDeserializer.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: fc7c4eab6abbae74eb74eee44a52e6a7
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/INodeTypeResolver.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: bcb0a1a8415e8714ab58565d3f392aec
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/IObjectDescriptor.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 86a19edb69863084e9364dec9fcda8c4
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/IObjectFactory.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 33215c487a2a3f04cbbe41c318253ee0
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/IObjectGraphTraversalStrategy.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: d6232168616fce2428643fe75d1ed035
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/IObjectGraphVisitor.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: c5985b699bccf7548a76738be6b6e551
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/IPropertyDescriptor.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: e8b315e9dc4f0cc46a5996fd714949df
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/IRegistrationLocationSelectionSyntax.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 915f534464f498641ab97a0e2c651b77
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/ITypeInspector.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 6c3bd4a3f0eca6e4f92ba855bc058d25
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/ITypeResolver.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: c1356281a3d017849a3240d70d9cfacd
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/IValueDeserializer.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 432dc17fcd3e2cb40990aab6122f075f
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/IValuePromise.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: ff3525defc264b14c816465f47cdaff0
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/IValueSerializer.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: e935f5c26bd25144096157783aa4f6d6
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/IYamlConvertible.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: f42bad1c9f9fdf242b696f20c2e66259
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/IYamlSerializable.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: f114886060e4acf46b36ac2c9f610cc3
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/IYamlTypeConverter.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: cd510436aeb100b4fbfef4b48e85fae6
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/LazyComponentRegistrationList.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 7fb8445f98c5ea943ac8e7aabe5ece7b
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/LazyComponentRegistrationListExtensions.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 8463bea3e5ea0764c8fde8598dcfe794
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/Nothing.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 13c3a8b94ac1de641806bb1733305bda
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/ObjectDescriptor.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: f8bf6f944f8b97c42924be110365cef7
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/PropertyDescriptor.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 0b7070fc0d7ceed47b84b18eb05b66cf
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/SerializationOptions.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 9c67f330b01d4f341af5108e0e1c3af7
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/Serializer.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 5b467b3e0a9a9784c9a6eb58c50eceea
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/SerializerBuilder.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: ccef6dc01b4e9ac45998c14da7d14c3e
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/StreamFragment.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 2cc976dab2b9f8a43b435abbe2687e5a
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/TagMappings.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: fba02faec11e7ca41a8c8ce8ef7c4cc2
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/YamlAttributeOverrides.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 0f1b1e1d3f9f9b74a9b7a7511a5e6844
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/YamlAttributeOverridesInspector.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 8bbeea575ee7a0b4cb53bf99b07e9949
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/YamlAttributesTypeInspector.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 197ec9064396a7c42bfa14c2edfd50ad
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/YamlFormatter.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: ecf403b8b63963644a55535cb66115a5
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/YamlIgnoreAttribute.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 77f1129984ccc56479428f6bd3758b91
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Serialization/YamlMember.cs
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.MonoScript, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 0a9e040f29652374d912092d37f683fa
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Examples.unity
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.SceneAsset, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 5878fe3c964cf444eae1b86940714d35
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/Readme.txt
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEngine.TextAsset, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: ae757a5a9013c3543882d26d55092bc9
+    m_importFrom: Assets/Prefab-Generator/Extend/Editor/YamlDotNet_unity/YamlDotNet.license.txt
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEngine.TextAsset, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: a7a80ae9be9b8cc4883b437042dadf46
+    m_importFrom: Assets/Prefab-Generator/Extend/Newtonsoft.Json.dll
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.DefaultAsset, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 6da9cb3e8d002ba4d8c0d0eae12511e5
+    m_importFrom: "Assets/Prefab-Generator/\u8BBE\u8BA1\u601D\u8DEF/\u6838\u5FC3\u6A21\u5757.txt"
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEngine.TextAsset, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: ca4d6f1f74245b0458930a41b6f12e8e
+    m_importFrom: "Assets/Prefab-Generator/\u8BBE\u8BA1\u601D\u8DEF/\u968F\u673A\u8054\u60F3.xmind"
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.DefaultAsset, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: 219bf2fdd7c033143a4547d7f596a62b
+    m_importFrom: "Assets/Prefab-Generator/\u8BBE\u8BA1\u601D\u8DEF/\u9884\u5236\u4F53\u6A21\u677F\u5F15\u64CE.png"
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEngine.Texture2D, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: d9fe744c3320fca4b892df1410fc1af5
+    m_importFrom: Assets/Prefab-Generator/README.md
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.DefaultAsset, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - m_assetDatabaseId: c06cc9c35962a9e439ab0ea0415c80a9
+    m_importFrom: Assets/s.unity
+    m_exportTo: 
+    m_variantName: 
+    m_assetTypeString: UnityEditor.SceneAsset, UnityEditor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  m_version: 2
