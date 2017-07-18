@@ -16,10 +16,10 @@ using System;
 
 public class InformationTest
 {
-    public const string prefabPath = "Assets/Prefab-Generator/Test/Cube.prefab";
-    public const string prefab1Path = "Assets/Prefab-Generator/Test/Cube1.prefab";
-    public const string scenePath = "Assets/Prefab-Generator/Test/S.unity";
-    public const string scene1Path = "Assets/Prefab-Generator/Test/S1.unity";
+    public const string prefabPath = "Assets/Prefab-Generator/Demo/Test/Cube.prefab";
+    public const string prefab1Path = "Assets/Prefab-Generator/Demo/Test/Cube1.prefab";
+    public const string scenePath = "Assets/Prefab-Generator/Demo/Test/S.unity";
+    public const string scene1Path = "Assets/Prefab-Generator/Demo/Test/S1.unity";
     [Test]
     public void PrintPrefabInfo1()
     {
@@ -126,6 +126,14 @@ public class InformationTest
         var newColor = m_Colorr as YamlScalarNode;
         newColor.Value = "0";
         YamlFileUtility.WritePrefabFile(docs, scene1Path);
+    }
+    [Test]
+    public void ReplecePrefabTest()
+    {
+        GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>(prefabPath);
+        GameObject prefab1 = AssetDatabase.LoadAssetAtPath<GameObject>(prefab1Path);
+        GameObject obj = GameObject.Instantiate(prefab);
+        PrefabUtility.ReplacePrefab(obj, prefab1, ReplacePrefabOptions.ConnectToPrefab);
     }
 }
 /*%YAML 1.1
