@@ -4,8 +4,10 @@ using UnityEngine;
 
 namespace PrefabGenerate
 {
-    public class PGAsset : ScriptableObject
+    [System.Serializable]
+    public class ObjHold
     {
-        public List<ObjHold> item;
+        public string type;
+        public Object item;
     }
 }

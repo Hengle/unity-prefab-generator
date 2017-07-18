@@ -7,11 +7,15 @@ namespace PrefabGenerate
 {
     public static class PGUtility 
     {
-        public static string Menu_PGWindow = "Window/Prefab-Gen";
-
+        private const string Menu_PGWindow = "Window/Prefab-Gen";
+        [MenuItem(Menu_PGWindow)]
+        private static void OpenPGWindow()
+        {
+            EditorWindow.GetWindow<PGWindow>();
+        }
         public static PGAsset CreateAsset()
         {
-            var asset = PGAsset.CreateInstance<PGAsset>();
+            var asset = ScriptableObject.CreateInstance<PGAsset>();
             ProjectWindowUtil.CreateAsset(asset, "PGAsset.asset");
             return asset;
         }
