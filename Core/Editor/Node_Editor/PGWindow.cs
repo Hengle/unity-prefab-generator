@@ -31,7 +31,7 @@ namespace PrefabGenerate
 		/// <summary>
 		/// Opens the Node Editor window and loads the last session
 		/// </summary>
-		[MenuItem("Window/Node Editor")]
+		[MenuItem(PGUtility.Menu_PGWindow)]
 		public static PGWindow OpenNodeEditor () 
 		{
 			_editor = GetWindow<PGWindow>();
@@ -39,7 +39,7 @@ namespace PrefabGenerate
 
 			NodeEditor.ReInit (false);
 			Texture iconTexture = ResourceManager.LoadTexture (EditorGUIUtility.isProSkin? "Textures/Icon_Dark.png" : "Textures/Icon_Light.png");
-			_editor.titleContent = new GUIContent ("Node Editor", iconTexture);
+			_editor.titleContent = new GUIContent ("Prefab-Gen", iconTexture);
 
 			return _editor;
 		}
