@@ -5,14 +5,8 @@ using UnityEngine.Events;
 using UnityEngine;
 
 public class RootScriptBehaiver : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public int intValue;
+    public string stringValue;
+    [SerializeField]
+    private Vector2 vectorValue;
 }

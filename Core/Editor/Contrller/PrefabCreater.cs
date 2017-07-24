@@ -13,7 +13,7 @@ namespace PrefabGenerate
         public string exprotRoot = "Assets/Prefab-Generator/Demo/PrefabGen/";
         public GameObject CreatePrefab(ObjectNode rootNode)
         {
-            var name = (rootNode.obj.item == null ? System.Guid.NewGuid().ToString() : rootNode.obj.item.name) +".prefab";
+            var name = (rootNode.obj.name == "" ?"Empty": rootNode.obj.name) +".prefab";
             var obj = CreateObjFromNode(rootNode);
             return PGUtility.GenPrefab(exprotRoot + name, obj);
         }
@@ -30,10 +30,13 @@ namespace PrefabGenerate
                 gameObj = new GameObject("EmptyNode");
             }
             //添加脚本
-            foreach (var item in node.monoScript)
+            foreach (var item in node.sHolds)
             {
-                MonoScript monoscript = item;
-                gameObj.AddComponent(monoscript.GetClass());
+                MonoScript monoscript = item.monoScript;
+                if (monoscript != null)
+                {
+                    gameObj.AddComponent(monoscript.GetClass());
+                }
             }
 
             foreach (var item in node.outputRight.connections)

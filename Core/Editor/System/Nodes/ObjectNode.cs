@@ -18,12 +18,12 @@ namespace PrefabGenerate
         public ValueConnectionKnob outputRight;
 
         public ObjHold obj = new ObjHold();
-        public List<MonoScript> monoScript = new List<MonoScript>();
+        public List<ScriptHold> sHolds = new List<ScriptHold>();
+
         public override void NodeGUI()
         {
             EditorGUILayout.LabelField("This node hold transform!");
             DrawObjectHolder();
-            //DrawScriptInfo();
         }
 
         private void DrawObjectHolder()
@@ -35,15 +35,6 @@ namespace PrefabGenerate
                 if (string.IsNullOrEmpty(obj.name) && obj.item != null) obj.name = obj.item.name;
             }
         }
-
-        //private void DrawScriptInfo()
-        //{
-        //    using (var hor = new EditorGUILayout.HorizontalScope())
-        //    {
-        //        EditorGUILayout.SelectableLabel("脚本");
-        //        monoScript = EditorGUILayout.ObjectField(monoScript, typeof(MonoScript), false) as MonoScript;
-        //    }
-        //}
-
+ 
     }
 }

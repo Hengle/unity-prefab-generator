@@ -42,49 +42,4 @@ using System;
 
 			return letters[index].ToString();
 		}
-
-		///A more complete ToString version
-		public static string ToStringAdvanced(this object o) {
-
-			if (o == null || o.Equals(null)){
-				return "NULL";
-			}
-
-			if (o is string){
-				return string.Format("\"{0}\"", (string)o);
-			}
-
-			if (o is UnityEngine.Object){
-				return (o as UnityEngine.Object).name;
-			}
-
-			var t = o.GetType();
-			if (t.RTIsSubclassOf(typeof(System.Enum))) {
-				var flagAtt = t.RTGetAttribute<System.FlagsAttribute>(true);
-				if (flagAtt != null) {
-					var value = "";
-					var cnt = 0;
-					var list = System.Enum.GetValues(t);
-					foreach (var e in list) {
-						if ((Convert.ToInt32(e) & Convert.ToInt32(o)) == Convert.ToInt32(e)) {
-							cnt++;
-							if (value == "") {
-								value = e.ToString();
-							} else {
-								value = "Mixed...";
-							}
-						}
-					}
-					if (cnt == 0) {
-						return "Nothing";
-					}
-					if (cnt == list.Length){
-						return "Everything";
-					}
-					return value;
-				}
-			}
-
-			return o.ToString();
-		}
 	}
