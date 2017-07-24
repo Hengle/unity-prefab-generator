@@ -23,18 +23,19 @@ namespace PrefabGenerate
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
         }
-        public static void GenPrefab(string path, GameObject obj)
+        public static GameObject GenPrefab(string path, GameObject obj)
         {
             FileUtility.InitFileDiractory(path);
             GameObject pfb = AssetDatabase.LoadAssetAtPath<GameObject>(path);
             if (pfb == null)
             {
-                PrefabUtility.CreatePrefab(path, obj, UnityEditor.ReplacePrefabOptions.ConnectToPrefab);
+                pfb = PrefabUtility.CreatePrefab(path, obj, UnityEditor.ReplacePrefabOptions.ConnectToPrefab);
             }
             else
             {
-                PrefabUtility.ReplacePrefab(obj, pfb, ReplacePrefabOptions.ConnectToPrefab);
+                pfb = PrefabUtility.ReplacePrefab(obj, pfb, ReplacePrefabOptions.ConnectToPrefab);
             }
+            return pfb;
         }
         public static Object TryParent(Object instence)
         {

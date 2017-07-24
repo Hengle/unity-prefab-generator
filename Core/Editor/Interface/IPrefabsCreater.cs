@@ -9,6 +9,6 @@ namespace PrefabGenerate
 {
     public interface IPrefabCreater
     {
-        void CreatePrefab(ObjectNode rootNode);
+        GameObject CreatePrefab(ObjectNode rootNode);
     }
 }

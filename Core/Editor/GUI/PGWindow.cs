@@ -119,14 +119,18 @@ namespace PrefabGenerate
 			}
 		}
 
-		#endregion
+        #endregion
 
-		#region GUI
+        #region GUI
 
-		private void OnGUI()
+        private void OnGUI()
 		{
-			// Initiation
-			NodeEditor.checkInit(true);
+            if (Event.current.control && Event.current.keyCode == KeyCode.S)
+            {
+                if (editorInterface != null) editorInterface.SaveCanvas();
+            }
+            // Initiation
+            NodeEditor.checkInit(true);
 			if (NodeEditor.InitiationError)
 			{
 				GUILayout.Label("Node Editor Initiation failed! Check console for more information!");

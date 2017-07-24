@@ -4,16 +4,18 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine;
 using System;
+using UnityEditor;
 
 namespace PrefabGenerate
 {
     public class PrefabCreater : IPrefabCreater
     {
-        public void CreatePrefab(ObjectNode rootNode)
+        public string exprotRoot = "Assets/Prefab-Generator/Demo/PrefabGen/";
+        public GameObject CreatePrefab(ObjectNode rootNode)
         {
             var name = (rootNode.obj.item == null ? System.Guid.NewGuid().ToString() : rootNode.obj.item.name) +".prefab";
             var obj = CreateObjFromNode(rootNode);
-            PGUtility.GenPrefab("Assets/"+ name, obj);
+            return PGUtility.GenPrefab(exprotRoot + name, obj);
         }
 
         private GameObject CreateObjFromNode(ObjectNode node)
@@ -21,25 +23,32 @@ namespace PrefabGenerate
             GameObject gameObj = null;
             if (node.obj.item != null){
                 gameObj = GameObject.Instantiate(node.obj.item);
-                gameObj.name = node.obj.item.name;
+                gameObj.name = node.obj.name;
             }
             else
             {
                 gameObj = new GameObject("EmptyNode");
             }
-            //添加脚本等
+            //添加脚本
+            foreach (var item in node.monoScript)
+            {
+                MonoScript monoscript = item;
+                gameObj.AddComponent(monoscript.GetClass());
+            }
+
             foreach (var item in node.outputRight.connections)
             {
                 if (item.body!= null)
                 {
                     var objh = item.body as ObjectNode;
-                    if (objh.isRoot)
+                    if (objh is ChildRootNode)
                     {
-                        //判断是否是根节点，防止循环
+                        //新预制体并记录信息
+                        CreatePrefab(objh);
                     }
                     else
                     {
-                        var child = CreateObjFromNode(objh);
+                       var child = CreateObjFromNode(objh);
                         child.transform.SetParent(gameObj.transform);
                     }
                 }

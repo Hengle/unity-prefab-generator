@@ -60,6 +60,7 @@ namespace PrefabGenerate
 				menu.AddItem(new GUIContent("Reload Canvas"), false, ReloadCanvas);
 				menu.AddSeparator("");
 				menu.AddItem(new GUIContent("Save Canvas"), false, SaveCanvas);
+     
 				menu.AddItem(new GUIContent("Save Canvas As"), false, SaveCanvasAs);
 				menu.AddSeparator("");
 #endif
@@ -105,14 +106,13 @@ namespace PrefabGenerate
                     var objNode = item as ObjectNode;
                     if (objNode != null)
                     {
-                        if (objNode.isRoot)
+                        if (objNode is RootNode)
                         {
                             prefabCreater.CreatePrefab(item as ObjectNode);
                         }
                     }
                 }
             }
-           
 #if !UNITY_EDITOR
             GUILayout.Space(5);
             if (GUILayout.Button("Quit", NodeEditorGUI.toolbarButton, GUILayout.Width(100)))
@@ -199,7 +199,7 @@ namespace PrefabGenerate
 				ShowNotification(new GUIContent("Cannot reload canvas as it has not been saved yet!"));
 		}
 
-		private void SaveCanvas()
+		public void SaveCanvas()
 		{
 			string path = canvasCache.nodeCanvas.savePath;
 			if (!string.IsNullOrEmpty(path))
