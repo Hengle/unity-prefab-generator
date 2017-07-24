@@ -21,7 +21,7 @@ namespace PrefabGenerate
 
 		// Canvas cache
 		public NodeEditorUserCache canvasCache;
-		public NodeEditorInterface editorInterface;
+		public UserEditorInterface editorInterface;
 
 		// GUI
 		private Rect canvasWindowRect { get { return new Rect(0, editorInterface.toolbarHeight, position.width, position.height - editorInterface.toolbarHeight); } }
@@ -44,14 +44,11 @@ namespace PrefabGenerate
 			return _editor;
 		}
 
-		/*
-		/// <summary>
-		/// Assures that the canvas is opened when double-clicking a canvas asset
-		/// </summary>
+      
 		[UnityEditor.Callbacks.OnOpenAsset(1)]
 		private static bool AutoOpenCanvas(int instanceID, int line)
 		{
-			if (Selection.activeObject != null && Selection.activeObject is NodeCanvas)
+			if (Selection.activeObject != null && Selection.activeObject is NodeEditorFramework.NodeCanvas)
 			{
 				string NodeCanvasPath = AssetDatabase.GetAssetPath(instanceID);
 				OpenNodeEditor().canvasCache.LoadNodeCanvas(NodeCanvasPath);
@@ -59,9 +56,8 @@ namespace PrefabGenerate
 			}
 			return false;
 		}
-		*/
-			
-		private void OnEnable()
+
+        private void OnEnable()
 		{
 			_editor = this;
 			NormalReInit();
@@ -117,7 +113,7 @@ namespace PrefabGenerate
 			canvasCache.AssureCanvas();
 			if (editorInterface == null)
 			{ // Setup editor interface
-				editorInterface = new NodeEditorInterface();
+				editorInterface = new UserEditorInterface();
 				editorInterface.canvasCache = canvasCache;
 				editorInterface.ShowNotificationAction = ShowNotification;
 			}
