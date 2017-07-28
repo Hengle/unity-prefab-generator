@@ -75,10 +75,7 @@ namespace PrefabGenerate
             var modify = node.modify;
             if (modify != null)
             {
-                var type = Assembly.Load("Assembly-CSharp-Editor").GetType("PrefabGenerate." + modify.name);
-
-                var modifyInstence = Activator.CreateInstance(type);
-                (modifyInstence as IPrefabModify).ModifyPrefab(node);
+                modify.ModifyPrefab(node);
             }
         }
     }

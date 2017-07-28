@@ -8,10 +8,12 @@ using UnityEditor;
 
 namespace PrefabGenerate
 {
-    public class RootModify : IPrefabModify
+    public class RootModify :PrefabModify
     {
-        public void ModifyPrefab(ObjectNode node)
+        public string stringValue;
+        public override void ModifyPrefab(ObjectNode node)
         {
+            Debug.Log(stringValue);
            var script = node.obj.instence.GetComponent<RootScriptBehaiver>();
             var childs = new List<GameObject>();
             foreach (var item in node.outputRight.connections)

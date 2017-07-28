@@ -18,7 +18,7 @@ namespace PrefabGenerate
         SerializedProperty modifyProp;
         ObjectNode _node;
         GameObject _scriptTempObj;
-
+        MonoScript textasset;
         Dictionary<MonoScript, SerializedObject> monoTemp = new Dictionary<MonoScript, SerializedObject>();
         public new void OnEnable()
         {
@@ -43,37 +43,67 @@ namespace PrefabGenerate
 
         private void DrawModifyInfo()
         {
-            using (var hor = new EditorGUILayout.HorizontalScope())
+            if (GUILayout.Button("添加修饰脚本", EditorStyles.toolbarButton))
             {
-                EditorGUILayout.PropertyField(modifyProp);
-                if (modifyProp.objectReferenceValue != null)
+                var modifyTempGUID = "884bbfff294ca6945891de6e938eb83d";
+                var path = AssetDatabase.GUIDToAssetPath(modifyTempGUID);
+                if (!string.IsNullOrEmpty(path))
                 {
-                    var text = modifyProp.objectReferenceValue as TextAsset;
-                    var type = Assembly.Load("Assembly-CSharp-Editor").GetType("PrefabGenerate." + text.name);
-                    if (type == null || type.IsSubclassOf(typeof(IPrefabModify)))
-                    {
-                        modifyProp.objectReferenceValue = null;
-                    }
+                    CreateScriptUtil("newModifyer.cs", path);
                 }
-                EditorGUI.BeginDisabledGroup(modifyProp.objectReferenceValue != null);
-
-                if (GUILayout.Button("+",GUILayout.Width(20)))
+                else
                 {
-                    var modifyTempGUID = "884bbfff294ca6945891de6e938eb83d";
-                    var path = AssetDatabase.GUIDToAssetPath(modifyTempGUID);
-                    if (!string.IsNullOrEmpty(path))
+                    Debug.LogError("模板文件[ModifyTemp.txt].meta文件发生变化");
+                }
+            }
+
+            if (textasset == null && modifyProp.objectReferenceValue != null)
+            {
+                textasset = MonoScript.FromScriptableObject(modifyProp.objectReferenceValue as PrefabModify);
+            }
+            EditorGUI.BeginChangeCheck();
+
+            if(textasset == null)
+            {
+                textasset = EditorGUILayout.ObjectField(textasset, typeof(MonoScript), false) as MonoScript;
+            }
+
+            bool change = EditorGUI.EndChangeCheck();
+
+            if (change)
+            {
+                if (textasset.GetClass().IsSubclassOf(typeof(PrefabModify)))
+                {
+                    modifyProp.objectReferenceValue = ScriptableObject.CreateInstance(textasset.GetClass());
+                }
+                else
+                {
+                    if (modifyProp.objectReferenceValue != null)
                     {
-                        CreateScriptUtil("newModifyer.cs", path);
+                        textasset = MonoScript.FromScriptableObject(modifyProp.objectReferenceValue as PrefabModify);
                     }
                     else
                     {
-                        Debug.LogError("模板文件[ModifyTemp.txt].meta文件发生变化");
+                        textasset = null;
                     }
                 }
-                EditorGUI.EndDisabledGroup();
             }
-           
+
+            if (modifyProp.objectReferenceValue != null)
+            {
+                SerializedObject obj = new SerializedObject(modifyProp.objectReferenceValue as PrefabModify);
+                obj.Update();
+                SerializedProperty iterator = obj.GetIterator();
+                bool enterChildren = true;
+                while (iterator.NextVisible(enterChildren))
+                {
+                    EditorGUILayout.PropertyField(iterator, true, new GUILayoutOption[0]);
+                    enterChildren = false;
+                }
+                obj.ApplyModifiedProperties();
+            }
         }
+
         public static void CreateScriptUtil(string path, string templete)
         {
             MethodInfo method = typeof(ProjectWindowUtil).GetMethod("CreateScriptAsset",

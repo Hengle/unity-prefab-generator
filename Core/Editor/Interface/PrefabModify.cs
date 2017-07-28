@@ -5,8 +5,8 @@ using UnityEngine.Events;
 using UnityEngine;
 namespace PrefabGenerate
 {
-    public interface IPrefabModify
+    public abstract class PrefabModify: ScriptableObject
     {
-        void ModifyPrefab(ObjectNode node);
+       public abstract void ModifyPrefab(ObjectNode node);
     }
 }
