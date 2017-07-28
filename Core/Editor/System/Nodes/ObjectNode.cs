@@ -19,7 +19,7 @@ namespace PrefabGenerate
 
         public ObjHold obj = new ObjHold();
         public List<ScriptHold> sHolds = new List<ScriptHold>();
-
+        public TextAsset modify;
         public override void NodeGUI()
         {
             EditorGUILayout.LabelField("This node hold transform!");

@@ -10,5 +10,6 @@ namespace PrefabGenerate
         public string type;
         public GameObject item;
         public string name;
+        public GameObject instence;
     }
 }

@@ -138,6 +138,8 @@ namespace PrefabGenerate
         private static Variable CreateVariable(FieldInfo item, Component behaiver)
         {
             var assembleUnity = typeof(Vector2).Assembly;
+            var assembleInt = typeof(int).Assembly;
+
             Variable var = new Variable();
             var.name = item.Name;
             var.type = item.FieldType.ToString();
@@ -156,7 +158,7 @@ namespace PrefabGenerate
             {
                 var.value = JsonUtility.ToJson(item.GetValue(behaiver));
             }
-            else
+            else if(item.FieldType.Assembly == assembleInt)
             {
                 var.value = Convert.ToString(item.GetValue(behaiver));
             }
@@ -166,6 +168,7 @@ namespace PrefabGenerate
         private static object LoadVariable(Variable item)
         {
             var assembleUnity = typeof(Vector2).Assembly;
+            var assembleInt = typeof(int).Assembly;
             Type dataType = Assembly.Load(item.assemble).GetType(item.type);
             object data = null;
             if (dataType.IsSubclassOf(typeof(Object)))
@@ -183,7 +186,7 @@ namespace PrefabGenerate
             {
                 data = JsonUtility.FromJson(item.value, dataType);
             }
-            else
+            else if(item.assemble == assembleInt.ToString())
             {
                 data = Convert.ChangeType(item.value, dataType);
             }

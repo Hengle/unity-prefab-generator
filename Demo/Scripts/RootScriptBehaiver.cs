@@ -10,4 +10,5 @@ public class RootScriptBehaiver : MonoBehaviour {
     [SerializeField]
     private Vector2 vectorValue;
     public GameObject objValue;
+    public GameObject[] childItem;
 }

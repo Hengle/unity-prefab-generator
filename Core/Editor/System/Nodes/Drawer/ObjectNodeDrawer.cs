@@ -8,15 +8,17 @@ using UnityEditor.UI;
 using NodeEditorFramework;
 using NodeEditorFramework.Standard;
 using System;
-
+using System.Reflection;
 namespace PrefabGenerate
 {
     [CustomEditor(typeof(ObjectNode), true)]
     public class ObjectNodeDrawer : NodeInspector
     {
         SerializedProperty sHoldProp;
+        SerializedProperty modifyProp;
         ObjectNode _node;
         GameObject _scriptTempObj;
+
         Dictionary<MonoScript, SerializedObject> monoTemp = new Dictionary<MonoScript, SerializedObject>();
         public new void OnEnable()
         {
@@ -26,6 +28,7 @@ namespace PrefabGenerate
             {
                 item.InitVariables();
             }
+            modifyProp = serializedObject.FindProperty("modify");
             sHoldProp = serializedObject.FindProperty("sHolds");
             CreateHoldAndLoadInformation();
         }
@@ -34,8 +37,51 @@ namespace PrefabGenerate
             serializedObject.Update();
             base.OnInspectorGUI();
             DrawScriptInfo();
+            DrawModifyInfo();
             serializedObject.ApplyModifiedProperties();
         }
+
+        private void DrawModifyInfo()
+        {
+            using (var hor = new EditorGUILayout.HorizontalScope())
+            {
+                EditorGUILayout.PropertyField(modifyProp);
+                if (modifyProp.objectReferenceValue != null)
+                {
+                    var text = modifyProp.objectReferenceValue as TextAsset;
+                    var type = Assembly.Load("Assembly-CSharp-Editor").GetType("PrefabGenerate." + text.name);
+                    if (type == null || type.IsSubclassOf(typeof(IPrefabModify)))
+                    {
+                        modifyProp.objectReferenceValue = null;
+                    }
+                }
+                EditorGUI.BeginDisabledGroup(modifyProp.objectReferenceValue != null);
+
+                if (GUILayout.Button("+",GUILayout.Width(20)))
+                {
+                    var modifyTempGUID = "884bbfff294ca6945891de6e938eb83d";
+                    var path = AssetDatabase.GUIDToAssetPath(modifyTempGUID);
+                    if (!string.IsNullOrEmpty(path))
+                    {
+                        CreateScriptUtil("newModifyer.cs", path);
+                    }
+                    else
+                    {
+                        Debug.LogError("模板文件[ModifyTemp.txt].meta文件发生变化");
+                    }
+                }
+                EditorGUI.EndDisabledGroup();
+            }
+           
+        }
+        public static void CreateScriptUtil(string path, string templete)
+        {
+            MethodInfo method = typeof(ProjectWindowUtil).GetMethod("CreateScriptAsset",
+                BindingFlags.Static | BindingFlags.NonPublic);
+            if (method != null)
+                method.Invoke(null, new object[] { templete, path });
+        }
+
         private void DrawScriptInfo()
         {
             if (GUILayout.Button("添加关联脚本", EditorStyles.toolbarButton))
@@ -130,7 +176,7 @@ namespace PrefabGenerate
             {
                 var monoType = item.monoScript.GetClass();
                 var script = _scriptTempObj.GetComponent(monoType);
-                if(script == null)
+                if (script == null)
                 {
                     script = _scriptTempObj.AddComponent(monoType);
                 }
@@ -150,7 +196,7 @@ namespace PrefabGenerate
                     var holder = _node.sHolds.Find(x => x.monoScript == item.Key);
                     if (component != null && holder != null)
                     {
-                       PGUtility.AnalysisVariableFromComponent(component, holder.variables);
+                        PGUtility.AnalysisVariableFromComponent(component, holder.variables);
                     }
                 }
                 DestroyImmediate(_scriptTempObj);

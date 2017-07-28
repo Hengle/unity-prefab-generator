@@ -5,29 +5,31 @@ using UnityEngine.Events;
 using UnityEngine;
 using System;
 using UnityEditor;
-
+using System.Reflection;
 namespace PrefabGenerate
 {
-    public class PrefabCreater : IPrefabCreater
+    public class PrefabCreater
     {
         public string exprotRoot = "Assets/Prefab-Generator/Demo/PrefabGen/";
         public GameObject CreatePrefab(ObjectNode rootNode)
         {
-            var name = (rootNode.obj.name == "" ?"Empty": rootNode.obj.name) +".prefab";
+            var name = (rootNode.obj.name == "" ? "Empty" : rootNode.obj.name) + ".prefab";
             var obj = CreateObjFromNode(rootNode);
-            return PGUtility.GenPrefab(exprotRoot + name, obj);
+            var prefab = PGUtility.GenPrefab(exprotRoot + name, obj);
+            ExecuteModifys(rootNode);
+            return prefab;
         }
 
         private GameObject CreateObjFromNode(ObjectNode node)
         {
-            GameObject gameObj = null;
-            if (node.obj.item != null){
-                gameObj = GameObject.Instantiate(node.obj.item);
-                gameObj.name = node.obj.name;
+            if (node.obj.item != null)
+            {
+                node.obj.instence = GameObject.Instantiate(node.obj.item);
+                node.obj.instence.name = node.obj.name;
             }
             else
             {
-                gameObj = new GameObject("EmptyNode");
+                node.obj.instence = new GameObject("EmptyNode");
             }
             //添加脚本
             foreach (var item in node.sHolds)
@@ -35,14 +37,14 @@ namespace PrefabGenerate
                 MonoScript monoscript = item.monoScript;
                 if (monoscript != null)
                 {
-                    var script= gameObj.AddComponent(monoscript.GetClass());
+                    var script = node.obj.instence.AddComponent(monoscript.GetClass());
                     PGUtility.InistallVariableToBehaiver(item.variables, script);
                 }
             }
 
             foreach (var item in node.outputRight.connections)
             {
-                if (item.body!= null)
+                if (item.body != null)
                 {
                     var objh = item.body as ObjectNode;
                     if (objh is ChildRootNode)
@@ -52,12 +54,32 @@ namespace PrefabGenerate
                     }
                     else
                     {
-                       var child = CreateObjFromNode(objh);
-                        child.transform.SetParent(gameObj.transform);
+                        var child = CreateObjFromNode(objh);
+                        child.transform.SetParent(node.obj.instence.transform);
                     }
                 }
             }
-            return gameObj;
+            return node.obj.instence;
+        }
+
+        private void ExecuteModifys(ObjectNode node)
+        {
+            foreach (var item in node.outputRight.connections)
+            {
+                if (item.body != null)
+                {
+                    var objh = item.body as ObjectNode;
+                    ExecuteModifys(objh);
+                }
+            }
+            var modify = node.modify;
+            if (modify != null)
+            {
+                var type = Assembly.Load("Assembly-CSharp-Editor").GetType("PrefabGenerate." + modify.name);
+
+                var modifyInstence = Activator.CreateInstance(type);
+                (modifyInstence as IPrefabModify).ModifyPrefab(node);
+            }
         }
     }
 }

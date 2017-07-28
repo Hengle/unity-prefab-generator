@@ -30,7 +30,7 @@ namespace PrefabGenerate
         private delegate bool? DefImportLocationGUI(ref object[] locationArgs);
         private DefImportLocationGUI ImportLocationGUI;
         private DefExportLocationGUI ExportLocationGUI;
-        private IPrefabCreater prefabCreater = new PrefabCreater();
+        private PrefabCreater prefabCreater = new PrefabCreater();
         public void ShowNotification(GUIContent message)
         {
             if (ShowNotificationAction != null)
