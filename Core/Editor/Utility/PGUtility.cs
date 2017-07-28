@@ -19,7 +19,7 @@ namespace PrefabGenerate
             GenPrefab(path, obj);
             SetAssetBundleName(path, assetBundleName);
         }
-        public static void SetAssetBundleName(string path,string assetBundleName)
+        public static void SetAssetBundleName(string path, string assetBundleName)
         {
             if (!FileUtility.IsFileExist(path)) return;
             AssetImporter importer = UnityEditor.AssetImporter.GetAtPath(path);
@@ -84,48 +84,24 @@ namespace PrefabGenerate
         /// <param name="variables"></param>
         public static void AnalysisVariableFromComponent(Component behaiver, List<Variable> variables)
         {
-            var assembleUnity = typeof(Vector2).Assembly;
             variables.Clear();
             var type = behaiver.GetType();
             FieldInfo[] publicFields = type.GetFields(BindingFlags.GetField | BindingFlags.Instance | BindingFlags.Public);
             foreach (var item in publicFields)
             {
-                Variable var = new Variable();
-                var.name = item.Name;
-                var.type = item.FieldType.ToString();
-                var.assemble = item.FieldType.Assembly.ToString();
-                if (item.FieldType.Assembly == assembleUnity)
-                {
-                    var.value = JsonUtility.ToJson(item.GetValue(behaiver));
-                }
-                else
-                {
-                    var.value = Convert.ToString(item.GetValue(behaiver));
-                }
-                var.isPrivate = false;
-                variables.Add(var);
+                var variable = CreateVariable(item, behaiver);
+                variable.isPrivate = false;
+                variables.Add(variable);
             }
             FieldInfo[] privateFields = type.GetFields(BindingFlags.GetField | BindingFlags.Instance | BindingFlags.NonPublic);
             foreach (var item in privateFields)
             {
                 var attrs = item.GetCustomAttributes(false);
-                if (attrs!= null && attrs.Length > 0 && Array.Find(attrs,x=>x is SerializeField) != null)
+                if (attrs != null && attrs.Length > 0 && Array.Find(attrs, x => x is SerializeField) != null)
                 {
-                    Variable var = new Variable();
-                    var.name = item.Name;
-                    var.type = item.FieldType.ToString();
-                    var.assemble = item.FieldType.Assembly.ToString();
-                   
-                    var.isPrivate = true;
-                    if (item.FieldType.Assembly == assembleUnity)
-                    {
-                        var.value = JsonUtility.ToJson(item.GetValue(behaiver));
-                    }
-                    else
-                    {
-                        var.value = Convert.ToString(item.GetValue(behaiver));
-                    }
-                    variables.Add(var);
+                    var variable = CreateVariable(item, behaiver);
+                    variable.isPrivate = true;
+                    variables.Add(variable);
                 }
             }
         }
@@ -137,39 +113,81 @@ namespace PrefabGenerate
         /// <param name="behaiver"></param>
         public static void InistallVariableToBehaiver(List<Variable> variables, Component behaiver)
         {
-            var assembleUnity = typeof(Vector2).Assembly;
             var type = behaiver.GetType();
+
             foreach (var item in variables)
             {
-                if (!item.isPrivate)
+                var data = LoadVariable(item);
+                if (item.isPrivate)
                 {
-                    Type dataType = Assembly.Load(item.assemble).GetType(item.type);
-                    object data = null;
-                    if (item.assemble == assembleUnity.ToString())
-                    {
-                        data = JsonUtility.FromJson(item.value, dataType);
-                    }
-                    else
-                    {
-                        data = Convert.ChangeType(item.value, dataType);
-                    }
-                    type.InvokeMember(item.name, BindingFlags.SetField | BindingFlags.Instance | BindingFlags.Public, null, behaiver, new object[] { data }, null, null, null);
+                    type.InvokeMember(item.name, BindingFlags.SetField | BindingFlags.Instance | BindingFlags.NonPublic, null, behaiver, new object[] { data }, null, null, null);
                 }
                 else
                 {
-                    Type dataType = Assembly.Load(item.assemble).GetType(item.type);
-                    object data = null;
-                    if (item.assemble == assembleUnity.ToString())
-                    {
-                        data = JsonUtility.FromJson(item.value, dataType);
-                    }
-                    else
-                    {
-                        data = Convert.ChangeType(item.value, dataType);
-                    }
-                    type.InvokeMember(item.name, BindingFlags.SetField | BindingFlags.Instance | BindingFlags.NonPublic, null, behaiver, new object[] { data }, null, null, null);
+                    type.InvokeMember(item.name, BindingFlags.SetField | BindingFlags.Instance | BindingFlags.Public, null, behaiver, new object[] { data }, null, null, null);
                 }
             }
+        }
+
+        /// <summary>
+        /// 反射生成Variable
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="behaiver"></param>
+        /// <returns></returns>
+        private static Variable CreateVariable(FieldInfo item, Component behaiver)
+        {
+            var assembleUnity = typeof(Vector2).Assembly;
+            Variable var = new Variable();
+            var.name = item.Name;
+            var.type = item.FieldType.ToString();
+            var.assemble = item.FieldType.Assembly.ToString();
+
+            if (item.FieldType.IsSubclassOf(typeof(Object)))
+            {
+                var obj = item.GetValue(behaiver) as Object;
+                var path = AssetDatabase.GetAssetPath(obj);
+                if (!string.IsNullOrEmpty(path))
+                {
+                    var.value = AssetDatabase.AssetPathToGUID(path);
+                }
+            }
+            else if (item.FieldType.Assembly == assembleUnity)
+            {
+                var.value = JsonUtility.ToJson(item.GetValue(behaiver));
+            }
+            else
+            {
+                var.value = Convert.ToString(item.GetValue(behaiver));
+            }
+            return var;
+        }
+
+        private static object LoadVariable(Variable item)
+        {
+            var assembleUnity = typeof(Vector2).Assembly;
+            Type dataType = Assembly.Load(item.assemble).GetType(item.type);
+            object data = null;
+            if (dataType.IsSubclassOf(typeof(Object)))
+            {
+                if (!string.IsNullOrEmpty(item.value))
+                {
+                    var path = AssetDatabase.GUIDToAssetPath(item.value);
+                    if (!string.IsNullOrEmpty(path))
+                    {
+                        data = AssetDatabase.LoadAssetAtPath<Object>(path);
+                    }
+                }
+            }
+            else if (item.assemble == assembleUnity.ToString())
+            {
+                data = JsonUtility.FromJson(item.value, dataType);
+            }
+            else
+            {
+                data = Convert.ChangeType(item.value, dataType);
+            }
+            return data;
         }
     }
 }

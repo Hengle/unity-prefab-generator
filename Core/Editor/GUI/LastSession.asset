@@ -9,79 +9,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26a89c36c30b2e940804d7efcccaf0bd, type: 3}
-  m_Name: Node Canvas
+  m_Name: LastSession
   m_EditorClassIdentifier: 
   editorStates:
-  - {fileID: 114560600918442880}
+  - {fileID: 114286980428961154}
   saveName: Node Canvas
   savePath: Assets/Prefab-Generator/Demo/Node Canvas.asset
   livesInScene: 0
   nodes:
-  - {fileID: 114817575085380406}
-  - {fileID: 114798532983448374}
-  - {fileID: 114268509664259196}
+  - {fileID: 114416231846186846}
+  - {fileID: 114607907825545370}
+  - {fileID: 114050832448343966}
   groups: []
---- !u!114 &114050396702463820
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Input Left
-  m_EditorClassIdentifier: 
-  body: {fileID: 114798532983448374}
-  direction: 1
-  maxConnectionCount: 0
-  styleID: Float
-  _connections:
-  - {fileID: 114211520854709660}
-  side: 4
-  sidePosition: 20
-  sideOffset: 0
---- !u!114 &114128126442233000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Input Left
-  m_EditorClassIdentifier: 
-  body: {fileID: 114798532983448374}
-  direction: 2
-  maxConnectionCount: 1
-  styleID: Float
-  _connections: []
-  side: 2
-  sidePosition: 40
-  sideOffset: 0
---- !u!114 &114211520854709660
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Input Left
-  m_EditorClassIdentifier: 
-  body: {fileID: 114268509664259196}
-  direction: 2
-  maxConnectionCount: 1
-  styleID: Float
-  _connections:
-  - {fileID: 114544140621449706}
-  - {fileID: 114050396702463820}
-  side: 2
-  sidePosition: 40
-  sideOffset: 0
---- !u!114 &114268509664259196
+--- !u!114 &114050832448343966
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -95,7 +35,7 @@ MonoBehaviour:
   position: {x: -480, y: -130}
   dynamicConnectionPorts: []
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
-  outputRight: {fileID: 114211520854709660}
+  outputRight: {fileID: 114415796208938676}
   obj:
     type: 
     item: {fileID: 1807956673099726, guid: 183a6b8b30cdb9344ab99458fcd7c757, type: 2}
@@ -113,12 +53,17 @@ MonoBehaviour:
       type: System.String
       isPrivate: 0
       assemble: mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+    - name: objValue
+      value: e6f3db915a7c0d6438d36303b523049a
+      type: UnityEngine.GameObject
+      isPrivate: 0
+      assemble: UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     - name: vectorValue
       value: '{"x":99.0,"y":0.0}'
       type: UnityEngine.Vector2
       isPrivate: 1
       assemble: UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
---- !u!114 &114498728896614930
+--- !u!114 &114199500189021362
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -129,35 +74,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
   m_Name: Input Left
   m_EditorClassIdentifier: 
-  body: {fileID: 114817575085380406}
-  direction: 2
-  maxConnectionCount: 1
-  styleID: Float
-  _connections: []
-  side: 2
-  sidePosition: 40
-  sideOffset: 0
---- !u!114 &114544140621449706
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
-  m_Name: Input Left
-  m_EditorClassIdentifier: 
-  body: {fileID: 114817575085380406}
+  body: {fileID: 114416231846186846}
   direction: 1
   maxConnectionCount: 0
   styleID: Float
   _connections:
-  - {fileID: 114211520854709660}
+  - {fileID: 114415796208938676}
   side: 4
   sidePosition: 20
   sideOffset: 0
---- !u!114 &114560600918442880
+--- !u!114 &114286980428961154
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -170,10 +96,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
   parentEditor: {fileID: 0}
-  selectedNode: {fileID: 114268509664259196}
+  selectedNode: {fileID: 114050832448343966}
   panOffset: {x: 12, y: 9}
   zoom: 1.4
---- !u!114 &114798532983448374
+--- !u!114 &114415796208938676
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input Left
+  m_EditorClassIdentifier: 
+  body: {fileID: 114050832448343966}
+  direction: 2
+  maxConnectionCount: 1
+  styleID: Float
+  _connections:
+  - {fileID: 114603358624779010}
+  - {fileID: 114199500189021362}
+  side: 2
+  sidePosition: 40
+  sideOffset: 0
+--- !u!114 &114416231846186846
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -187,14 +134,53 @@ MonoBehaviour:
   position: {x: -227.2, y: -28.6}
   dynamicConnectionPorts: []
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
-  outputRight: {fileID: 114128126442233000}
+  outputRight: {fileID: 114442294485302962}
   obj:
     type: 
     item: {fileID: 1007730050848956, guid: 3ebbce9e20d9b174996022f1a46e872e, type: 2}
     name: m3
   sHolds: []
-  inputLeft: {fileID: 114050396702463820}
---- !u!114 &114817575085380406
+  inputLeft: {fileID: 114199500189021362}
+--- !u!114 &114442294485302962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input Left
+  m_EditorClassIdentifier: 
+  body: {fileID: 114416231846186846}
+  direction: 2
+  maxConnectionCount: 1
+  styleID: Float
+  _connections: []
+  side: 2
+  sidePosition: 40
+  sideOffset: 0
+--- !u!114 &114603358624779010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input Left
+  m_EditorClassIdentifier: 
+  body: {fileID: 114607907825545370}
+  direction: 1
+  maxConnectionCount: 0
+  styleID: Float
+  _connections:
+  - {fileID: 114415796208938676}
+  side: 4
+  sidePosition: 20
+  sideOffset: 0
+--- !u!114 &114607907825545370
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -208,10 +194,29 @@ MonoBehaviour:
   position: {x: -222.40001, y: -117.4}
   dynamicConnectionPorts: []
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
-  outputRight: {fileID: 114498728896614930}
+  outputRight: {fileID: 114817901766623348}
   obj:
     type: 
-    item: {fileID: 1348387930908262, guid: 1899aad6dc34ac64783c3b5fafe185b6, type: 2}
+    item: {fileID: 1007730050848956, guid: 3996efb8981df1c4fa69266d2b994543, type: 2}
     name: m2
   sHolds: []
-  inputLeft: {fileID: 114544140621449706}
+  inputLeft: {fileID: 114603358624779010}
+--- !u!114 &114817901766623348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e2c7fd038ecb46b317c1e003f31dc, type: 3}
+  m_Name: Input Left
+  m_EditorClassIdentifier: 
+  body: {fileID: 114607907825545370}
+  direction: 2
+  maxConnectionCount: 1
+  styleID: Float
+  _connections: []
+  side: 2
+  sidePosition: 40
+  sideOffset: 0

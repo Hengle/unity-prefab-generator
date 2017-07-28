@@ -35,7 +35,8 @@ namespace PrefabGenerate
                 MonoScript monoscript = item.monoScript;
                 if (monoscript != null)
                 {
-                    gameObj.AddComponent(monoscript.GetClass());
+                    var script= gameObj.AddComponent(monoscript.GetClass());
+                    PGUtility.InistallVariableToBehaiver(item.variables, script);
                 }
             }
 
